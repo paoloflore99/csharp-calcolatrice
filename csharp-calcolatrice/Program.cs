@@ -17,9 +17,7 @@ namespace csharp_calcolatrice
             {
                return  Convert.ToInt32(Console.ReadLine());
             }
-            int numeroIntero = +5;
-            int valoreAssoluto = Math.Abs(numeroIntero);
-            Console.WriteLine("valore assoluto di " + numeroIntero + " " + valoreAssoluto);    
+
 
             Console.WriteLine("cosa vuoi fare?");
             Console.WriteLine("1 Somma di due numeri interi");
@@ -34,6 +32,7 @@ namespace csharp_calcolatrice
             Console.WriteLine("10 Minimo tra due numeri double");
             Console.WriteLine("11 Massimo tra due numeri interi");
             Console.WriteLine("12 Massimo tra due numeri double");
+            Console.WriteLine("13 elevamento a potenza");
             string scelta = Console.ReadLine();
             if (scelta == "1")
             {
@@ -184,9 +183,13 @@ namespace csharp_calcolatrice
                     Console.WriteLine($" = {ValoreDoubleDue}");
                 }
             }
-            else if (scelta != "1"  )
+            else if (scelta == "13"  )
             {
-
+                Console.Write("inserisci base ");
+                int ValoreUnoInt = ValoreI();
+                //Console.WriteLine();
+                int ValoredueInt = ValoreI();
+                Console.Write("inserisci esponente ");
             }
         }
     }
