@@ -17,7 +17,9 @@ namespace csharp_calcolatrice
             {
                return  Convert.ToInt32(Console.ReadLine());
             }
-
+            int numeroIntero = +5;
+            int valoreAssoluto = Math.Abs(numeroIntero);
+            Console.WriteLine("valore assoluto di " + numeroIntero + " " + valoreAssoluto);    
 
             Console.WriteLine("cosa vuoi fare?");
             Console.WriteLine("1 Somma di due numeri interi");
@@ -98,15 +100,11 @@ namespace csharp_calcolatrice
             else if (scelta == "7")
             {
                 stampa();
-                int ValoreUnoInt = Convert.ToInt32(Console.ReadLine());
-                if (ValoreUnoInt > 0)
-                {
-                   string positivo = ValoreUnoInt .ToString();
-                   string risultato= "+" +  positivo ;
-                    Console.WriteLine($" = {risultato}");
-                }
+                int ValoreUnoInt = ValoreI();
+                int VaValoreAssolutoint = Math.Abs(ValoreUnoInt);
+                Console.WriteLine($" = {VaValoreAssolutoint}");
 
-                
+
             }
             else if (scelta == "8") 
             {
@@ -121,15 +119,23 @@ namespace csharp_calcolatrice
                 }*/
                 stampa();
                 double ValoreDoubleUNo = Convert.ToDouble(Console.ReadLine());
-                double valoreAssoluto = Math.Abs(ValoreDoubleUNo);
-                Console.WriteLine($" = {valoreAssoluto}");
+                double ValoreAssoluto = Math.Abs(ValoreDoubleUNo);
+                Console.WriteLine($" = {ValoreAssoluto}");
+
             }
             else if (scelta == "9")
             {
                 stampa();
-                int ValoreUnoInt = Convert.ToInt32(Console.ReadLine());
-                int Valoreassoluto = Math.Abs(ValoreUnoInt);
-                Console.WriteLine($" = {Valoreassoluto}");
+                int ValoreUnoInt = ValoreI(); ;
+                stampa();
+                int ValoredueInt = ValoreI(); 
+                if (ValoreUnoInt > ValoredueInt)
+                {
+                    Console.WriteLine($" = {ValoredueInt}");
+                }
+                else
+                { Console.WriteLine($" = {ValoreUnoInt}");
+                }
 
             }
             else if (scelta == "10")
