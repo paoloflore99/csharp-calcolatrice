@@ -1,4 +1,5 @@
 ﻿using System.Security;
+using System.Text.RegularExpressions;
 
 namespace csharp_calcolatrice
 {
@@ -109,6 +110,7 @@ namespace csharp_calcolatrice
             }
             else if (scelta == "8") 
             {
+                /*
                 stampa();
                 double ValoreDoubleUNo = Convert.ToDouble(Console.ReadLine());
                 if(ValoreDoubleUNo < 0)
@@ -116,21 +118,19 @@ namespace csharp_calcolatrice
                     string negativo = ValoreDoubleUNo.ToString();
                     string risultato = "+" + negativo;
                     Console.WriteLine($" = {risultato}");
-                }
+                }*/
+                stampa();
+                double ValoreDoubleUNo = Convert.ToDouble(Console.ReadLine());
+                double valoreAssoluto = Math.Abs(ValoreDoubleUNo);
+                Console.WriteLine($" = {valoreAssoluto}");
             }
             else if (scelta == "9")
             {
                 stampa();
-                int ValoreUnoInt = ValoreI();
-                stampa();
-                int ValoredueInt = ValoreI(); 
-                if (ValoreUnoInt > ValoredueInt)
-                {
-                    Console.WriteLine($" = {ValoredueInt}");
-                }
-                else
-                { Console.WriteLine($" = {ValoreUnoInt}");
-                }
+                int ValoreUnoInt = Convert.ToInt32(Console.ReadLine());
+                int Valoreassoluto = Math.Abs(ValoreUnoInt);
+                Console.WriteLine($" = {Valoreassoluto}");
+
             }
             else if (scelta == "10")
             {
