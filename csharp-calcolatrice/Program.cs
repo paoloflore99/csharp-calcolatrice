@@ -6,36 +6,40 @@ namespace csharp_calcolatrice
     {
         static void Main(string[] args)
         {
+
              static void stampa()
             {
                 Console.Write($"inserisci numero  ");
             }
 
-            static void ValoreI()
+            int ValoreI()
             {
-                int ValoreUnoInt = Convert.ToInt32(Console.ReadLine());
+               return  Convert.ToInt32(Console.ReadLine());
             }
 
 
             Console.WriteLine("cosa vuoi fare?");
-            Console.WriteLine("1 per addizioni int");
-            Console.WriteLine("2 per addizioni double");
-            Console.WriteLine("3 per sotrazione double");
-            Console.WriteLine("4 per sotrazione double");
-            Console.WriteLine("5 per moltiplicare double");
-            Console.WriteLine("6 per moltiplicare double");
-            Console.WriteLine("7 per moltiplicare double");
-            Console.WriteLine("8 per moltiplicare double");
-            Console.WriteLine("9 ottieni valore assoluto");
+            Console.WriteLine("1 Somma di due numeri interi");
+            Console.WriteLine("2 Somma di due numeri double");
+            Console.WriteLine("3 Differenza tra due numeri interi");
+            Console.WriteLine("4 Differenza tra due numeri double");
+            Console.WriteLine("5 Moltiplicazione di due numeri interi");
+            Console.WriteLine("6 Moltiplicazione di due numeri double");
+            Console.WriteLine("7 Valore assoluto di un numero intero");
+            Console.WriteLine("8 Valore assoluto di un numero double");
+            Console.WriteLine("9 Minimo tra due numeri interi");
+            Console.WriteLine("10 Minimo tra due numeri double");
+            Console.WriteLine("11 Massimo tra due numeri interi");
+            Console.WriteLine("12 Massimo tra due numeri double");
             string scelta = Console.ReadLine();
             if (scelta == "1")
             {
 
                 stampa();
-                int ValoreUnoInt = Convert.ToInt32(Console.ReadLine());
+                int ValoreUnoInt = ValoreI();
                 Console.Write("+");
                 stampa();
-                int ValoreDueInt = Convert.ToInt32(Console.ReadLine());
+                int ValoreDueInt = ValoreI();
 
                 int somma = CalcoliHelper.SommaInt(ValoreUnoInt, ValoreDueInt); ;
                 Console.Write($" = {somma}");
@@ -53,10 +57,10 @@ namespace csharp_calcolatrice
             else if (scelta == "3")
             {
                 stampa();
-                int ValoreUnoInt = Convert.ToInt32(Console.ReadLine());
+                int ValoreUnoInt = ValoreI();
                 Console.Write("-");
                 stampa();
-                int ValoredueInt = Convert.ToInt32(Console.ReadLine());
+                int ValoredueInt = ValoreI(); ;
                 int DifferenzeINt = CalcoliHelper.DifferenzeINt(ValoreUnoInt, ValoredueInt);
                 Console.WriteLine($" = {DifferenzeINt}");
             } 
@@ -73,10 +77,10 @@ namespace csharp_calcolatrice
             else if(scelta == "5")
             {
                 stampa();
-                int ValoreUnoInt = Convert.ToInt32(Console.ReadLine());
+                int ValoreUnoInt = ValoreI(); ;
                 Console.Write("*");
                 stampa();
-                int ValoredueInt = Convert.ToInt32(Console.ReadLine());
+                int ValoredueInt = ValoreI();
                 int MoltiplicareInt =CalcoliHelper.DifferenzeINt(ValoreUnoInt, ValoredueInt);
                 Console.WriteLine($" = {MoltiplicareInt}");
             }
@@ -90,7 +94,7 @@ namespace csharp_calcolatrice
                 double MoltiplicareDou = CalcoliHelper.DifferenzeDouble(ValoreDoubleUNo, ValoreDoubleDue);
                 Console.WriteLine($" = {MoltiplicareDou}");
             }
-            else if (scelta == "9")
+            else if (scelta == "7")
             {
                 stampa();
                 int ValoreUnoInt = Convert.ToInt32(Console.ReadLine());
@@ -103,18 +107,78 @@ namespace csharp_calcolatrice
 
                 
             }
-            else if (scelta == "10") 
+            else if (scelta == "8") 
             {
                 stampa();
                 double ValoreDoubleUNo = Convert.ToDouble(Console.ReadLine());
                 if(ValoreDoubleUNo < 0)
                 {
                     string negativo = ValoreDoubleUNo.ToString();
-                    string risultato = "-" + negativo;
+                    string risultato = "+" + negativo;
                     Console.WriteLine($" = {risultato}");
                 }
             }
+            else if (scelta == "9")
+            {
+                stampa();
+                int ValoreUnoInt = ValoreI();
+                stampa();
+                int ValoredueInt = ValoreI(); 
+                if (ValoreUnoInt > ValoredueInt)
+                {
+                    Console.WriteLine($" = {ValoredueInt}");
+                }
+                else
+                { Console.WriteLine($" = {ValoreUnoInt}");
+                }
+            }
+            else if (scelta == "10")
+            {
+                stampa();
+                double ValoreDoubleUNo = Convert.ToDouble(Console.ReadLine());
+                stampa();
+                double ValoreDoubleDue = Convert.ToDouble(Console.ReadLine());
+                if (ValoreDoubleUNo > ValoreDoubleDue)
+                {
+                    Console.WriteLine($" = {ValoreDoubleDue}");
+                }
+                else
+                {
+                    Console.WriteLine($" = {ValoreDoubleUNo}");
+                }
+            }
             else if (scelta == "11")
+            {
+
+                stampa();
+                int ValoreUnoInt = ValoreI();
+                stampa();
+                int ValoredueInt = ValoreI();
+                if (ValoreUnoInt > ValoredueInt)
+                {
+                    Console.WriteLine($" = {ValoreUnoInt}");
+                }
+                else
+                {
+                    Console.WriteLine($" = {ValoredueInt}");
+                }
+            }
+            else if (scelta == "12")
+            {
+                stampa();
+                double ValoreDoubleUNo = Convert.ToDouble(Console.ReadLine());
+                stampa();
+                double ValoreDoubleDue = Convert.ToDouble(Console.ReadLine());
+                if (ValoreDoubleUNo > ValoreDoubleDue)
+                {
+                    Console.WriteLine($" = {ValoreDoubleUNo}");
+                }
+                else
+                {
+                    Console.WriteLine($" = {ValoreDoubleDue}");
+                }
+            }
+            else if (scelta != "1"  )
             {
 
             }
