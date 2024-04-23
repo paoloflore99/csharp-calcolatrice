@@ -81,7 +81,7 @@ namespace csharp_calcolatrice
                 Console.Write("*");
                 stampa();
                 int ValoredueInt = ValoreI();
-                int MoltiplicareInt =CalcoliHelper.DifferenzeINt(ValoreUnoInt, ValoredueInt);
+                int MoltiplicareInt =CalcoliHelper.MoltiplicareInt(ValoreUnoInt, ValoredueInt);
                 Console.WriteLine($" = {MoltiplicareInt}");
             }
             else if (scelta == "6")
@@ -91,7 +91,7 @@ namespace csharp_calcolatrice
                 Console.Write("*");
                 stampa();
                 double ValoreDoubleDue = Convert.ToDouble(Console.ReadLine());
-                double MoltiplicareDou = CalcoliHelper.DifferenzeDouble(ValoreDoubleUNo, ValoreDoubleDue);
+                double MoltiplicareDou = CalcoliHelper.MoltiplicareDou(ValoreDoubleUNo, ValoreDoubleDue);
                 Console.WriteLine($" = {MoltiplicareDou}");
             }
             else if (scelta == "7")
