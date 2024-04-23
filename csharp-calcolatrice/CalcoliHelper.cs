@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlTypes;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,8 @@ namespace csharp_calcolatrice
 
         public static double ValoreDoubleUNo;
         public static double ValoreDoubleDue;
+
+  
 
 
 
@@ -39,6 +42,19 @@ namespace csharp_calcolatrice
         public static double DifferenzeDouble(double ValoreDoubleUNo, double ValoreDoubleDue)
         {
             return ValoreDoubleUNo - ValoreDoubleDue;
+        }
+
+
+
+
+        public static int MoltiplicareInt(int ValoreUnoInt, int ValoredueInt)
+        { 
+            return ValoreUnoInt * ValoredueInt;
+        }
+
+        public static double MoltiplicareDou(double ValoreDoubleUNo, double ValoreDoubleDue)
+        {
+            return ValoreDoubleUNo * ValoreDoubleDue;
         }
 
 
